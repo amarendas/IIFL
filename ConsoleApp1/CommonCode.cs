@@ -123,7 +123,24 @@ namespace VendorOpenAPIWebApp
             public string FromDate { get; set; }
             public string ToDate { get; set; }
         }
-
+        public class OrderRequest
+        {
+            public ReqHeader head = new ReqHeader();
+            public OrderReqBody body = new OrderReqBody();
+        }
+        public class OrderReqBody
+        {
+            public string ClientCode { get; set; }
+            public string OrderRequesterCode { get; set; }
+            public string OrderFore { get; set; }
+            public char Exchange  { get; set; }
+            public char ExchangeType { get; set; }
+            public double Price { get; set; }
+            public long OrderID { get; set; }
+            public string OrderType { get; set; }
+            public long Qty { get; set; }
+            // incomplete
+        }
         public class OrderStatusReq
         {
             public ReqHeader head = new ReqHeader();
